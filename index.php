@@ -3,6 +3,7 @@
 session_start();
 require_once "../authCookieSessionValidate.php";
 require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../assets.php';
 $appConfig = dp_get_config();
 
 if (!$isLoggedIn) {
@@ -501,9 +502,9 @@ require __DIR__ . '/../navbar.php';
 })();
 </script>
 
-<script src="../js/sw-manager.js"></script>
-<script src="../js/dienstplan-persistent-cache.js"></script>
-<script src="../js/nav-cache-refresh.js"></script>
+<script src="<?php echo dp_asset('js/sw-manager.js', '../'); ?>"></script>
+<script src="<?php echo dp_asset('js/dienstplan-persistent-cache.js', '../'); ?>"></script>
+<script src="<?php echo dp_asset('js/nav-cache-refresh.js', '../'); ?>"></script>
 
 </body>
 </html>
